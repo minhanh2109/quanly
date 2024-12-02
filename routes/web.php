@@ -33,6 +33,9 @@ Route::get('admin/dashboard',[HomeController::class,'index'])
 Route::get('view_category',[AdminController::class,'view_category'])
     ->middleware(['auth','admin']);
 //Thêm danh mục
-
-
+Route::post('add_category',[AdminController::class,'add_category'])
+    ->middleware(['auth','admin']);
+//Xóa danh mục
+Route::get('delete_category/{id}',[AdminController::class,'delete_category'])
+    ->middleware(['auth','admin']);
 

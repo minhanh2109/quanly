@@ -39,6 +39,25 @@
         align-self: center;
         /* margin: 30px; */
     }
+    .table-deg{
+      text-align: center;
+      margin: auto;
+      border: 2px solid black;
+      margin-top: 50px;
+      width: 600px;
+    }
+    th{
+      background-color: lightblue;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+    }
+    td{
+      color: lightpink;
+      padding: 10px;
+      border: 1px solid black;
+    }
   </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -97,15 +116,36 @@
         </div>
         <div class="div_deg">
           <p>Thêm danh mục</p>
-          <form action="">
+          <form action="{{ url('add_category') }}" method="POST">
               @csrf
               <div>
-                  <input type="text" name="category_name" placeholder="Tên danh mục">
+                  <input type="text" name="category" placeholder="Tên danh mục">
                   <input class="btn btn-primary" type="submit" value="Thêm danh mục">
               </div>
           </form>
-      </div>
-      >
+          
+
+        </div>
+
+         <!-- Xóa danh mục -->
+        <div>
+          <table class="table-deg">
+            <tr>
+              <th>Danh mục</th>
+              <th>Chức năng</th>
+            </tr>
+            @foreach ($data as $data)
+            <tr>
+              <td>{{$data->category_name}}</td>
+              <td>
+                <a class="btn btn-danger" href="{{ url('delete_category',$data->id) }}">Xóa</a>
+              </td>
+            </tr>
+            @endforeach
+            
+            
+          </table>
+        </div>
       </div>
     </div>
   </div>

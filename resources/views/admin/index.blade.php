@@ -40,45 +40,10 @@
           <a href="#" class="d-block">CHÀO MỪNG ADMIN <br>Trần Thị Minh Anh</a>
         </div>
       </div>
-      {{-- <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div> --}}
-
+      
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="{{url('view_category')}}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>QUẢN LÝ DANH MỤC</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-bars"></i>
-              <p>QUẢN LÝ SẢN PHẨM</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-tag"></i>
-              <p>QUẢN LÝ ĐƠN HÀNG</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>QUẢN LÝ KHÁCH HÀNG</p>
-            </a>
-          </li>
-        </ul>
+        @include('admin.menu')
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -117,45 +82,10 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <p>TỔNG SỐ ĐƠN HÀNG</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <p>TỔNG SỐ KHÁCH HÀNG</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <p>TỔNG SỐ SẢN PHẨM</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <p>TỔNG SỐ THƯƠNG HIỆU</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      @include('admin.maincontent')
+
     </section>
+    {!! Flasher::render() !!}
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -163,11 +93,6 @@
     <strong>Copyright &copy; 2024-2025 <a href="">Trần Thị Minh Anh</a>.</strong>
     All rights reserved.
   </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->

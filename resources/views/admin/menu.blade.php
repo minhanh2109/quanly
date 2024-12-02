@@ -5,18 +5,21 @@
         <p>QUẢN LÝ DANH MỤC</p>
       </a>
     </li>
+
     <li class="nav-item">
       <a href="pages/widgets.html" class="nav-link">
         <i class="nav-icon fas fa-bars"></i>
         <p>QUẢN LÝ SẢN PHẨM</p>
       </a>
     </li>
+
     <li class="nav-item">
       <a href="pages/widgets.html" class="nav-link">
         <i class="nav-icon fas fa-tag"></i>
         <p>QUẢN LÝ ĐƠN HÀNG</p>
       </a>
     </li>
+    
     <li class="nav-item">
       <a href="pages/widgets.html" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
