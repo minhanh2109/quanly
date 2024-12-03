@@ -35,6 +35,11 @@ Route::get('view_category',[AdminController::class,'view_category'])
 //Thêm danh mục
 Route::post('add_category',[AdminController::class,'add_category'])
     ->middleware(['auth','admin']);
+//Sửa danh mục
+Route::get('edit_category/{id}',[AdminController::class,'edit_category'])
+    ->middleware(['auth','admin']);
+Route::post('update_category/{id}',[AdminController::class,'update_category'])
+    ->middleware(['auth','admin']);
 //Xóa danh mục
 Route::get('delete_category/{id}',[AdminController::class,'delete_category'])
     ->middleware(['auth','admin']);

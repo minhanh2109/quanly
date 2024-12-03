@@ -19,8 +19,20 @@ class AdminController extends Controller
         $category = new Category();
         $category->category_name = $request->category;
         $category->save();
-        Flasher::addSuccess('Dữ liệu đã được lưu thành công!');
         return redirect()->back();
+    }
+
+    //Sửa danh mục
+    public function edit_category($id){
+        $data = Category::find($id);
+        return view('admin.edit_category', compact('data'));
+    }
+
+    public function update_category(Request $request, $id){
+        $data = Category::find($id);
+        $data->category_name = $request->category;
+        $data->save();
+        return redirect('/view_category');
     }
 
     //Xóa danh mục

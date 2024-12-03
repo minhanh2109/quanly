@@ -85,7 +85,6 @@
       @include('admin.maincontent')
 
     </section>
-    {!! Flasher::render() !!}
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
