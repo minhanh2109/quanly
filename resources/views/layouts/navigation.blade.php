@@ -79,7 +79,7 @@
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
 
-            <div class="mt-3 space-y-1">
+            <div class="mt-3 space-y-1"> 
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>

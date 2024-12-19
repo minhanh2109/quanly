@@ -7,8 +7,15 @@
       "default",
       {
         "ignore": [
-          "-ms-filter"
+          "-ms-filter",
+          "-webkit-text-size-adjust"
         ]
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
       }
     ]
   }

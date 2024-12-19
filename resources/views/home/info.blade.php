@@ -23,8 +23,15 @@
               VỀ CHÚNG TÔI
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              IVY Shop là điểm đến lý tưởng cho những tín đồ yêu thích thời trang! 
+              Chúng tôi tự hào mang đến cho bạn những bộ sưu tập mới nhất, 
+              đa dạng phong cách, từ thanh lịch, cá tính đến năng động và hiện đại.
             </p>
+            <p>
+              Với phương châm <b>"Chất lượng là ưu tiên hàng đầu"</b>, mỗi sản phẩm IVY mang đến đều được
+              lựa chọn kỹ lượng từ chất liệu, thiết kế đến từng đường kim mũi chỉ.
+              Chúng tôi sẽ luôn mang đến cho bạn sự trải nghiệm mua sắm tuyệt vời, tiện lợi và nhanh chóng.
+            </p> 
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="info_form ">

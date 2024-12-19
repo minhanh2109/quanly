@@ -24,27 +24,40 @@
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Liên hệ</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url('/login')}}">Đăng nhập</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url('/register')}}">Đăng ký</a>
-        </li>
+        <div class="user_option">
+          @if (Route::has('login'))
+            @auth
+              <div class="user_option">
+                <a href="cart.html">
+                  <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a>
+                <form class="form-inline" action="/search" method="GET">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm" name="query">
+                    <button class="btn nav_search-btn" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <li class="nav-item" style="padding-left: 20px">
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <input class="btn btn-success" type="submit" value="Đăng xuất">
+              </form>
+              </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('/login')}}">Đăng nhập</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('/register')}}">Đăng ký</a>
+              </li>
+            
+            @endauth
+          @endif
+        </div>
       </ul>
-      <div class="user_option">
-        <a href="cart.html">
-          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-        </a>
-        <form class="form-inline" action="/search" method="GET">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Tìm kiếm" name="query">
-            <button class="btn nav_search-btn" type="submit">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-        </form>
-        
-      </div>
     </div>
   </nav>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
